@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Pretty Good</title>
+        <meta charset="utf-8">
+        <link href="./main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./good.js"></script>
+        <script src="./main.js"></script>
+        <div class="page">
+            <div class="content">
+                <div class="header-container">
+                    <div class="header-1" role="heading">Header 1</div>
+                </div>
+                <div class="section-text">
+                    Please identify the correct response to this situation:
+                </div>
+                <div class="image-container-center">
+                    <img src="./dark_souls_you_died.jpg" width="90%" alt="Dark Souls: You Died"/>
+                </div>
+                <div class="form-container">
+                    <form onsubmit="return onFormSubmit()">
+                        <div 
+                            class="checkbox-contianer"
+                            id="gitgud" 
+                            onclick="onSelectOption(event, 'gitgud')"
+                            onkeydown="onSelectOption(event, 'gitgud')"
+                            role="checkbox"
+                            >
+                            <input type="checkbox" name="gitgud"/>
+                            <div class="checkbox-option-fakebox" aria-hidden="true">O</div>
+                            <div class="checkbox-option-nobefore" >git gud</div>
+                        </div>
+                        <div 
+                            class="checkbox-contianer"
+                            id="uninstall" 
+                            onclick="onSelectOption(event,'uninstall')"
+                            onkeydown="onSelectOption(event,'uninstall')"
+                            role="checkbox"
+                            >
+                            <input type="checkbox" name="uninstall"/> 
+                            <div class="checkbox-option-fakebox" aria-hidden="true">-</div>
+                            <div class="checkbox-option-nobefore">uninstall the game</div>
+                        </div>
+                        <input type="submit" value="Choose wisely"/>
+                    </form>
+                </div>
+
+                <div class="modal-container" hidden=true role="alertdialog">
+                    <div class=modal-background>
+                        <div class=modal-box>
+                            You have chosen to <span id=chosenOption>xxxx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            //Initial rendering
+            refreshCheckboxes();
+        </script>
+    </body>
+</html>

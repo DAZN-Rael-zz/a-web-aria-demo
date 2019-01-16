@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Not very good</title>
+        <meta charset="utf-8">
+        <link href="./main.css" rel="stylesheet">
+    </head>
+    <body>
+        <script src="./bad.js"></script>
+        <script src="./main.js"></script>
+        <div class="page">
+            <div class="content">
+                <div class="header-container">
+                    <div class="header-1">Header 1</div>
+                </div>
+                <div class="section-text">
+                    Please identify the correct response to this situation:
+                </div>
+                <div class="image-container-center">
+                    <img src="./dark_souls_you_died.jpg" width="90%"/>
+                </div>
+                <div class="form-container">
+                    <form onsubmit="return onFormSubmit()">
+                        <div class="checkbox-contianer">
+                            <input type="checkbox" name="gitgud"/>
+                            <div class="checkbox-option checkbox-option-checked" id="gitgud" onclick="onSelectOption(event, 'gitgud')">git gud</div>
+                        </div>
+                        <div class="checkbox-contianer">
+                            <input type="checkbox" name="uninstall"/> 
+                            <div class="checkbox-option" id="uninstall" onclick="onSelectOption(event, 'uninstall')">uninstall the game</div>
+                        </div>
+                        <input type="submit" value="Choose wisely"/>
+                    </form>
+                </div>
+
+                <div class="modal-container" hidden=true>
+                    <div class=modal-background>
+                        <div class=modal-box>
+                            You have chosen to <span id=chosenOption>xxxx</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            //Initial rendering
+            refreshCheckboxes();
+        </script>
+    </body>
+</html>
